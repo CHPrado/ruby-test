@@ -1,5 +1,10 @@
 class VowelCount
     def initialize(sentence)
+        if !sentence.is_a? String
+            puts "Parâmetro deve ser uma String."
+            return
+        end
+
         count(sentence)
     end
 
@@ -19,5 +24,3 @@ class VowelCount
         puts vowels
     end
 end
-
-VowelCount.new("O cachorro uiva faz auuuuu para a lua")
